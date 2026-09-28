@@ -1,0 +1,31 @@
+{
+  "name": "Nexus Token List",
+  "timestamp": "2026-01-01T00:00:00Z",
+  "version": {
+    "major": 1,
+    "minor": 0,
+    "patch": 0
+  },
+  "logoURI": "https://nxs1000free.io/nexus-logo.png",
+  "tokens": [
+    {
+      "chainId": 137,
+      "address": "0xF40F01805aDbD975be1477253042A2eF1fF39583",
+      "name": "nxs1000free.io",
+      "symbol": "NXS",
+      "decimals": 18,
+      "logoURI": "https://nxs1000free.io/nexus-logo.png",
+      "tags": [
+        "polygon",
+        "community"
+      ],
+      "extensions": {
+        "website": "https://nxs1000free.io",
+        "twitter": "https://twitter.com/NexusTokenNXS",
+        "polygonscan": "https://polygonscan.com/token/0xF40F01805aDbD975be1477253042A2eF1fF39583",
+        "metadataURI": "https://nxs1000free.io/nexus-metadata.json",
+        "whitepaper": "https://nxs1000free.io/whitepaper"
+      }
+    }
+  ]
+}

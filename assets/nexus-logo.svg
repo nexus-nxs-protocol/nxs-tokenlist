@@ -1,0 +1,76 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <defs>
+    <radialGradient id="bgGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#071929"/>
+      <stop offset="100%" stop-color="#020b18"/>
+    </radialGradient>
+    <radialGradient id="starGrad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#80eaff"/>
+      <stop offset="60%" stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#0066ff"/>
+    </radialGradient>
+    <radialGradient id="dot1Grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#80eaff"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </radialGradient>
+    <radialGradient id="dot2Grad" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#6699ff"/>
+      <stop offset="100%" stop-color="#0044cc"/>
+    </radialGradient>
+    <filter id="starGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="dotGlow" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="outerGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="128" cy="128" r="128" fill="url(#bgGrad)"/>
+
+  <!-- Outer decorative ring -->
+  <circle cx="128" cy="128" r="108" fill="none" stroke="rgba(0,212,255,0.12)" stroke-width="1"/>
+
+  <!-- Orbit ring 1 (outer) -->
+  <circle cx="128" cy="128" r="90" fill="none" stroke="rgba(0,212,255,0.22)" stroke-width="1" stroke-dasharray="6 4"/>
+
+  <!-- Orbit ring 2 (inner) -->
+  <circle cx="128" cy="128" r="66" fill="none" stroke="rgba(0,85,255,0.28)" stroke-width="0.8" stroke-dasharray="4 5"/>
+
+  <!-- Inner circle background -->
+  <circle cx="128" cy="128" r="44" fill="rgba(0,212,255,0.05)"/>
+  <circle cx="128" cy="128" r="44" fill="none" stroke="rgba(0,212,255,0.3)" stroke-width="1"/>
+
+  <!-- Orbiting dot 1 — top of outer ring -->
+  <g filter="url(#dotGlow)">
+    <circle cx="128" cy="38" r="8" fill="url(#dot1Grad)"/>
+  </g>
+
+  <!-- Orbiting dot 2 — bottom of inner ring -->
+  <g filter="url(#dotGlow)">
+    <circle cx="128" cy="194" r="7" fill="url(#dot2Grad)"/>
+  </g>
+
+  <!-- Star shape — center -->
+  <g filter="url(#starGlow)">
+    <polygon
+      points="128,82 139,112 172,112 147,131 156,162 128,143 100,162 109,131 84,112 117,112"
+      fill="url(#starGrad)"
+    />
+  </g>
+
+  <!-- Subtle outer glow ring -->
+  <circle cx="128" cy="128" r="120" fill="none" stroke="rgba(0,212,255,0.06)" stroke-width="2"/>
+
+  <!-- Corner tick marks for HUD feel -->
+  <line x1="30" y1="128" x2="38" y2="128" stroke="rgba(0,212,255,0.35)" stroke-width="1.5"/>
+  <line x1="218" y1="128" x2="226" y2="128" stroke="rgba(0,212,255,0.35)" stroke-width="1.5"/>
+  <line x1="128" y1="30" x2="128" y2="38" stroke="rgba(0,212,255,0.35)" stroke-width="1.5"/>
+  <line x1="128" y1="218" x2="128" y2="226" stroke="rgba(0,212,255,0.35)" stroke-width="1.5"/>
+</svg>
